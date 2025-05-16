@@ -48,6 +48,7 @@ h1 {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
+
 }
 
 #menu li {
@@ -87,6 +88,7 @@ main {
     background-color: lightblue;
     /*Make main take up any suprlus space */
     flex: 1 0 auto;
+        margin-top : 43px
 }
 
 /* Footer */
