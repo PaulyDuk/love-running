@@ -119,4 +119,16 @@ footer {
         display: none;
     }
 
+    #logo {
+        font-size: 200%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Make main content push down to accommodate larger screen*/
+        margin-top: 79px;
+    }
+
 }
