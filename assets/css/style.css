@@ -1,10 +1,10 @@
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* Exclude default styles */  
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -18,12 +18,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
 }
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -42,14 +45,13 @@ header a {
     color: inherit;
 }
 
-/* Menu */
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
 
-#menu li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -61,10 +63,10 @@ header a {
 nav {
     position: absolute;
     background-color: #ffffff;
+    width: 100%;
     left: 0;
-    width: 100%;    
-    box-shadow: 0 2px 2px #3a3a3a;
     padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     top: 100%;
 }
@@ -84,13 +86,13 @@ nav {
 
 /* Main content */
 main {
-    /*Make main take up any suprlus space */
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
-    margin-top : 47px;
+    margin-top: 47px;
 }
 
-/* Hero Styles */
-#hero { 
+/* Hero section */
+#hero {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
@@ -98,7 +100,7 @@ main {
 }
 
 #cover-text {
-    /* Added alpha for transparency */
+    /* Final rgba value sets the opacity so it is semi-transparent */
     background-color: rgba(241, 109, 107, .7);
     font-size: 130%;
     position: absolute;
@@ -109,10 +111,12 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
-    color: #ffffff
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
 }
 
+/* Reasons section */
 #reasons {
     width: 90%;
     margin: 20px auto;
@@ -124,7 +128,8 @@ main {
     font-size: 280%;
 }
 
-#benefits-physical > div, #benefits-mental > div{
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -139,7 +144,7 @@ main {
 }
 
 #circle-cover-bg {
-    background: url("../images/reasons-image.webp") no-repeat center center/cover;
+    background: url('../images/reasons-image.webp') no-repeat top center / cover;
     height: 90vw;
     width: 90vw;
     margin-bottom: 20px;
@@ -170,8 +175,9 @@ main {
     color: #3a3a3a;
 }
 
-/* Media Query: Tablets and larger (768px and up) */
+/* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -185,7 +191,7 @@ main {
         display: flex;
     }
 
-    #menu li {
+    #menu>li {
         padding-left: 1rem;
     }
 
@@ -194,41 +200,44 @@ main {
     }
 
     #logo {
-        font-size: 200%;
+        font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
 
     /* Main content */
     main {
-        /* Make main content push down to accommodate larger screen*/
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
-    /* Hero text */
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
     }
 
     /* Reasons section */
-    #benefits-physical, #benefits-mental {
+    #benefits-physical,
+    #benefits-mental {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    #benefits-physical > div, #benefits-mental > div {
+    #benefits-physical>div,
+    #benefits-mental>div {
         width: 75%;
     }
 
-    #benefits-mental {
+    #benefits-mental>div {
         text-align: end;
         align-self: flex-end;
-}
+    }
+
 }
 
-/* Media query for screens larger than 992px */
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
